@@ -1,0 +1,18 @@
+﻿@page "/parentpage"
+<h3>@Title</h3>
+
+<h3>Enter the title:</h3>
+<input type="text" class="form-control" @bind="Title" @bind:event="oninput"/>
+<br />
+<h3>Date time</h3>
+<input type="text" class="form-control" @bind="Date" @bind:format="dd-MM-yyyy" /> 
+@*<button type="button" class="btn btn-info" @onclick="ModifyTitle">ModifyTitle</button>
+<hr />*@
+<Child  @bind-MainTitle="@Title" @bind-MainTitle:event="MainTitleChanged"></Child>
+@code {
+
+    public string Title { get; set; } = "Two-Way-Binding";
+
+    public DateTime Date { get; set; } = DateTime.UtcNow;
+    //private void ModifyTitle() => Title = "One-Way Binding Modified";
+}

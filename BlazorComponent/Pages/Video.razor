@@ -1,0 +1,21 @@
+﻿@using BlazorComponent.Components
+@inherits VideoBase
+<h3>Video</h3>
+
+<div class="shadow-sm p-3 mb-3 bg-white rounded">
+    <div class="container">
+        <div class="row">
+            <iframe width="560" height="315"
+                    src="@SelectedVideo.Url"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <h3>@SelectedVideo.Title</h3>
+            <h4>@SelectedVideo.PublishedDate</h4>
+            <hr />
+            <br />
+            <br />
+            <Comment VideoComments="@SelectedVideo.Comments"></Comment>
+        </div>
+    </div>
+</div>
+ 

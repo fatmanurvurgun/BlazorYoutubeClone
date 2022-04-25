@@ -1,0 +1,16 @@
+﻿@page "/videos"
+@using BlazorComponent.Components
+@inherits VideosBase
+<h3>Welcome to Youtube Clone</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-7">
+            <!--Video-->
+            <Video SelectedVideo="@secilenVideo"></Video>
+        </div>
+        <div class="col-5">
+            <!--Video Collection-->
+            <VideoCollection  SelectVideo="SecilenVideoChanged"/> <!--VideoCollection Componentine parametre olarak SelectVideo değişkeniyle SeçilenVideoChanged Metodunu gönderdik-->
+        </div>
+    </div>
+</div>
